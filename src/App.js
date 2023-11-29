@@ -9,7 +9,7 @@ const NaverSearchExample = () => {
 
 	const handleSearch = async () => {
 		const encText = encodeURIComponent(query); // 올바른 URL 인코딩을 위해 변수에서 함수로 수정
-		const url = `v1/search/news?query=${encText}`;
+		const url = `https://openapi.naver.com/v1/search/news?query=${encText}`;
 
 		try {
 			const response = await fetch(url, {
