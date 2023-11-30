@@ -39,7 +39,7 @@ const NaverSearchExample = () => {
 
       {searchResult && (
         <div>
-          <h2>검색 결과</h2>
+          <h2 style={{ color: 'red' }}>검색 결과</h2>
           <ul>
             {searchResult.items.map((item, index) => (
               <li key={index}>
