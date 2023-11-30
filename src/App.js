@@ -4,23 +4,13 @@ const NaverSearchExample = () => {
 	const [query, setQuery] = useState("");
 	const [searchResult, setSearchResult] = useState(null);
 	const [error, setError] = useState(null);
-	const client_id = process.env.REACT_APP_CLIENT_ID;
-	const client_secret = process.env.REACT_APP_CLIENT_SECRET;
 
 	const handleSearch = async () => {
 		const encText = encodeURIComponent(query); // 올바른 URL 인코딩을 위해 변수에서 함수로 수정
-		const url = `v1/search/news.json?query=${encText}`;
+		const url = `/.netlify/functions/search?query=${encText}`;
 
 		try {
-			const response = await fetch(url, {
-				headers: {
-					"X-Naver-Client-Id": client_id,
-					"X-Naver-Client-Secret": client_secret,
-				},
-			});
-
-			console.log(response);
-
+			const response = await fetch(url);
 			if (!response.ok) {
 				throw new Error("네이버 API 요청 실패");
 			}
@@ -28,9 +18,6 @@ const NaverSearchExample = () => {
 			const data = await response.json();
 			setSearchResult(data);
 			setError(null);
-			console.log(searchResult);
-
-			console.log(data);
 		} catch (error) {
 			console.error("Error:", error);
 			setError("API 요청 중 오류가 발생했습니다.");
