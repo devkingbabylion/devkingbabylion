@@ -4,8 +4,8 @@ const NaverSearchExample = () => {
 	const [query, setQuery] = useState("");
 	const [searchResult, setSearchResult] = useState(null);
 	const [error, setError] = useState(null);
-	const client_id = "jnBKYwBUu03sh4t82Rql";
-	const client_secret = "DnqzQEbzO4";
+	const client_id = process.env.REACT_APP_CLIENT_ID;
+	const client_secret = process.env.REACT_APP_CLIENT_SECRET;
 
 	const handleSearch = async () => {
 		const encText = encodeURIComponent(query); // 올바른 URL 인코딩을 위해 변수에서 함수로 수정
