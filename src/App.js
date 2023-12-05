@@ -18,6 +18,9 @@ const NaverSearchExample = () => {
       const data = await response.json();
       setSearchResult(data);
       setError(null);
+
+      console.log(response);
+      console.log(data);
     } catch (error) {
       console.error('Error:', error);
       setError('API 요청 중 오류가 발생했습니다.');

@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8832b98e-f672-4eb2-a4bb-591d89248491/deploy-status)](https://app.netlify.com/sites/sprightly-nasturtium-89b611/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
