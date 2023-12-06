@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.article`
+export const StyledNewsCardLayout = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,7 +13,7 @@ export const Container = styled.article`
   cursor: pointer;
 `;
 
-export const TitleContent = styled.h3`
+export const StyledTitleContent = styled.h3`
   color: #000;
   font-size: 18px;
   font-weight: 500;
@@ -25,7 +25,7 @@ export const TitleContent = styled.h3`
   white-space: nowrap;
 `;
 
-export const DetailContent = styled.p`
+export const StyledDetailContent = styled.p`
   width: 100%;
   color: #3c3c43;
   font-size: 14px;
@@ -39,13 +39,13 @@ export const DetailContent = styled.p`
   overflow: hidden;
 `;
 
-export const DateContent = styled.p`
+export const StyledDateContent = styled.p`
   color: rgba(102, 102, 102, 0.8);
   font-size: 12px;
   line-height: normal;
 `;
 
-export const Divider = styled.div`
+export const StyledDivider = styled.div`
   width: 100%;
   height: 1px;
   background-color: #e6e6e6;

@@ -10,10 +10,10 @@ export default function SearchPage() {
 
   return (
     <div>
-      {searchResult && (
-        <div>
-          <Link to="/">home</Link>
-          <h2 style={{ color: 'red' }}>검색 결과</h2>
+      <div>
+        <Link to="/">home</Link>
+        <h2 style={{ color: 'red' }}>검색 결과</h2>
+        {searchResult && (
           <ul>
             {searchResult.items.map((item, index) => (
               <li key={index}>
@@ -21,8 +21,8 @@ export default function SearchPage() {
               </li>
             ))}
           </ul>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
