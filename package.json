@@ -12,9 +12,13 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "recoil": "^0.7.7",
     "styled-components": "^6.1.1",
     "styled-reset": "^4.5.1",
+=======
+    "styled-components": "^6.1.1",
+>>>>>>> 0e287f2 (✨ feature:  Programming페이지 Card 컴포넌트구현)
     "web-vitals": "^2.1.4"
   },
   "proxy": "https://openapi.naver.com",
