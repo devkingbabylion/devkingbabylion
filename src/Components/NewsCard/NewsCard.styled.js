@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledNewsCardLayout = styled.article`
+export const StyledCardLayout = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-between;

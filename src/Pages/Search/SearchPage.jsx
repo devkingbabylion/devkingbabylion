@@ -12,7 +12,7 @@ export default function SearchPage() {
     <div>
       <div>
         <Link to="/">home</Link>
-        <h2 style={{ color: 'red' }}>검색 결과</h2>
+        <h2>검색 결과</h2>
         {searchResult && (
           <ul>
             {searchResult.items.map((item, index) => (

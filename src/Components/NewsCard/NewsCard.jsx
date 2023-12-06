@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  StyledNewsCardLayout,
+  StyledCardLayout,
   StyledTitleContent,
   StyledDetailContent,
   StyledDivider,
@@ -9,7 +9,7 @@ import {
 
 export default function NewsCard({ title, description, link, pubDate }) {
   return (
-    <StyledNewsCardLayout onClick={() => window.open(link, '_blank')}>
+    <StyledCardLayout onClick={() => window.open(link, '_blank')}>
       <StyledTitleContent
         dangerouslySetInnerHTML={{ __html: title }}
       ></StyledTitleContent>
@@ -20,6 +20,6 @@ export default function NewsCard({ title, description, link, pubDate }) {
       <StyledDateContent>
         {pubDate.split(' ').slice(0, 5).join(' ')}
       </StyledDateContent>
-    </StyledNewsCardLayout>
+    </StyledCardLayout>
   );
 }
