@@ -34,7 +34,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <Header>🦁개발왕 아기사자🦁</Header>
+      <Header type="home" />
       <h2>개발왕 아기사자</h2>
       <input
         type="text"
