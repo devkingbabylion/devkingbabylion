@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import { StyledHomeLayout } from './home.styled';
+import SearchBar from '../../Components/SearchBar/SearchBar';
 
 export default function HomePage() {
   const [query, setQuery] = useState('');
@@ -37,15 +38,27 @@ export default function HomePage() {
     <>
       <Header type="home" />
       <StyledHomeLayout>
-        <p>🦁개발왕 아기사자🦁</p>
-        <input
+        <p
+          style={{
+            fontWeight: 'bold',
+            fontSize: '20px',
+          }}
+        >
+          🦁개발왕 아기사자🦁
+          <br></br>
+        </p>
+        {/* <input
           type="text"
           placeholder="검색할 단어를 입력하세요"
           value={query}
           onChange={e => setQuery(e.target.value)}
         />
-        <button onClick={handleSearch}>검색</button>
-
+        <button onClick={handleSearch}>검색</button> */}
+        <SearchBar
+          query={query}
+          setQuery={setQuery}
+          handleSearch={handleSearch}
+        />
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </StyledHomeLayout>
     </>
