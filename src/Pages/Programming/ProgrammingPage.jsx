@@ -5,10 +5,11 @@ import { StyledProgrammingLayout } from './programming.styled';
 
 export default function ProgrammingPage() {
   return (
-    <StyledProgrammingLayout>
-      <Header />
-      <p>Programming</p>
-      <Footer />
-    </StyledProgrammingLayout>
+    <>
+      <Header type="programming" />
+      <StyledProgrammingLayout>
+        <p>Programming</p>
+      </StyledProgrammingLayout>
+    </>
   );
 }

@@ -34,20 +34,20 @@ export default function HomePage() {
   };
 
   return (
+    <>
+      <Header type="home" />
+      <StyledHomeLayout>
+        <p>🦁개발왕 아기사자🦁</p>
+        <input
+          type="text"
+          placeholder="검색할 단어를 입력하세요"
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+        />
+        <button onClick={handleSearch}>검색</button>
 
-    <StyledHomeLayout>
-      <Header>🦁개발왕 아기사자🦁</Header>
-      <p>🦁개발왕 아기사자🦁</p>
-      <input
-        type="text"
-        placeholder="검색할 단어를 입력하세요"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-      />
-      <button onClick={handleSearch}>검색</button>
-
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <Footer />
-    </StyledHomeLayout>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+      </StyledHomeLayout>
+    </>
   );
 }
