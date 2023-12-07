@@ -8,11 +8,13 @@ import {
   useRecoilState,
   useRecoilValue,
 } from 'recoil';
+import Footer from './Components/Footer/Footer';
 
 export default function App() {
   return (
     <RecoilRoot>
       <GlobalStyle />
+      <Footer />
       <AppRoutes />
     </RecoilRoot>
   );
