@@ -34,6 +34,7 @@ export default function HomePage() {
   };
 
   return (
+
     <StyledHomeLayout>
       <Header>🦁개발왕 아기사자🦁</Header>
       <p>🦁개발왕 아기사자🦁</p>
