@@ -6,5 +6,6 @@ export const StyledHomeLayout = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: skyblue;
+  // height: 100vh;
+  // background-color: skyblue;
 `;
