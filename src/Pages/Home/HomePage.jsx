@@ -4,7 +4,7 @@ import { searchResultState } from '../../Recoil/searchResultState';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import { StyledHomeLayout } from './home.styled';
+import { StyledHomeLayout, StyledTitle } from './home.styled';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import Info from '../../Components/Info/Info';
 
@@ -39,30 +39,16 @@ export default function HomePage() {
     <>
       <Header type="home" />
       <StyledHomeLayout>
-        <p
-          style={{
-            fontWeight: 'bold',
-            fontSize: '20px',
-          }}
-        >
-          🦁개발왕 아기사자🦁
-          <br></br>
-        </p>
-        {/* <input
-          type="text"
-          placeholder="검색할 단어를 입력하세요"
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-        />
-        <button onClick={handleSearch}>검색</button> */}
+        <StyledTitle>🦁개발왕 아기사자🦁</StyledTitle>
         <SearchBar
           query={query}
           setQuery={setQuery}
           handleSearch={handleSearch}
         />
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <Info />
+        {error && <p>{error}</p>}
+
       </StyledHomeLayout>
+      <Footer />
     </>
   );
 }

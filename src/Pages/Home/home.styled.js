@@ -5,7 +5,12 @@ export const StyledHomeLayout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 
-  // height: 100vh;
-  // background-color: skyblue;
+  height: 100vh;
+`;
+
+export const StyledTitle = styled.p`
+  font-weigth: bold;
+  font-size: 20px;
 `;

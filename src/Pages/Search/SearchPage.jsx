@@ -3,6 +3,7 @@ import { useRecoilValue } from 'recoil';
 import { searchResultState } from '../../Recoil/searchResultState';
 import NewsCard from '../../Components/NewsCard/NewsCard';
 import Header from '../../Components/Header/Header';
+import Footer from '../../Components/Footer/Footer';
 
 export default function SearchPage() {
   const searchResult = useRecoilValue(searchResultState);
@@ -23,6 +24,7 @@ export default function SearchPage() {
           </ul>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

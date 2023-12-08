@@ -13,6 +13,8 @@ export const HeaderContainer = styled.header`
   list-style: none;
   font-size: 18px;
 
+  border-bottom: 1px solid #bdbdbd;
+
   ${props => {
     switch (props.type) {
       case 'home':
