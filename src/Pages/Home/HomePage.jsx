@@ -4,7 +4,7 @@ import { searchResultState } from '../../Recoil/searchResultState';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import { StyledHomeLayout } from './home.styled';
+import { StyledHomeLayout, StyledTitle } from './home.styled';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 
 export default function HomePage() {
@@ -38,21 +38,13 @@ export default function HomePage() {
     <>
       <Header type="home" />
       <StyledHomeLayout>
-        <p
-          style={{
-            fontWeight: 'bold',
-            fontSize: '20px',
-          }}
-        >
-          🦁개발왕 아기사자🦁
-          <br />
-        </p>
+        <StyledTitle>🦁개발왕 아기사자🦁</StyledTitle>
         <SearchBar
           query={query}
           setQuery={setQuery}
           handleSearch={handleSearch}
         />
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {error && <p>{error}</p>}
       </StyledHomeLayout>
       <Footer />
     </>
