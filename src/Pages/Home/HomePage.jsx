@@ -46,7 +46,7 @@ export default function HomePage() {
           handleSearch={handleSearch}
         />
         {error && <p>{error}</p>}
-
+        <Info />
       </StyledHomeLayout>
       <Footer />
     </>
