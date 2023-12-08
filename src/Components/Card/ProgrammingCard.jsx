@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import logo from '../../Assets/angular.svg';
 import link from '../../Assets/link.svg';
+import Angular from '../../Assets/Angular.svg';
+import JavaScript from '../../Assets/JavaScript.svg';
+import CSS from '../../Assets/CSS.svg';
+import BootStrap from '../../Assets/BootStrap.svg';
+import HTML5 from '../../Assets/HTML5.svg';
+import NodeJs from '../../Assets/NodeJs.svg';
+import Sass from '../../Assets/Sass.svg';
+import TailWind from '../../Assets/Tailwind.svg';
+import TypeScript from '../../Assets/TypeScript.svg';
+import Vue from '../../Assets/Vue.svg';
 
 const StyledProgrammingCard = styled.div`
   width: 347px;
@@ -56,8 +65,20 @@ const StyledHoverCard = styled.div`
   }
 `;
 
-export default function ProgrammingCard() {
+export default function ProgrammingCard({ name }) {
   const [card, setCard] = useState(false);
+  const logos = {
+    Angular,
+    JavaScript,
+    CSS,
+    HTML5,
+    NodeJs,
+    Sass,
+    TailWind,
+    BootStrap,
+    TypeScript,
+    Vue,
+  };
 
   return (
     <div>
@@ -67,13 +88,13 @@ export default function ProgrammingCard() {
       >
         {!card && (
           <div className="item">
-            <img src={logo} alt="logo" />
-            <p>Angular</p>
+            <img src={logos[name]} alt="logo" />
+            <p>{name}</p>
           </div>
         )}
         {card && (
           <StyledHoverCard>
-            <h1>JavaScript</h1>
+            <h1>{name}</h1>
             <div>
               <img src={link} alt="MDN" />
               <a href="">JavaScript MDN</a>
