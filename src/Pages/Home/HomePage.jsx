@@ -45,15 +45,8 @@ export default function HomePage() {
           }}
         >
           🦁개발왕 아기사자🦁
-          <br></br>
+          <br />
         </p>
-        {/* <input
-          type="text"
-          placeholder="검색할 단어를 입력하세요"
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-        />
-        <button onClick={handleSearch}>검색</button> */}
         <SearchBar
           query={query}
           setQuery={setQuery}
@@ -61,6 +54,7 @@ export default function HomePage() {
         />
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </StyledHomeLayout>
+      <Footer />
     </>
   );
 }

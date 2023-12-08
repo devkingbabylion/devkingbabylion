@@ -10,6 +10,7 @@ export default function ProgrammingPage() {
       <StyledProgrammingLayout>
         <p>Programming</p>
       </StyledProgrammingLayout>
+      <Footer />
     </>
   );
 }

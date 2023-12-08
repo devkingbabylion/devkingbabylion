@@ -15,8 +15,8 @@ export default function App() {
   return (
     <RecoilRoot>
       <GlobalStyle />
-      <Header />
-      <Footer />
+      {/* <Header /> */}
+      {/* <Footer /> */}
       <AppRoutes />
     </RecoilRoot>
   );

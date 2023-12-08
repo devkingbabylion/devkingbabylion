@@ -6,5 +6,5 @@ export const StyledProgrammingLayout = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: skyblue;
+  height: 100vh;
 `;

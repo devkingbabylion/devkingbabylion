@@ -2,6 +2,7 @@ import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { searchResultState } from '../../Recoil/searchResultState';
 import Header from '../../Components/Header/Header';
+import Footer from '../../Components/Footer/Footer';
 export default function SearchPage() {
   const searchResult = useRecoilValue(searchResultState);
   console.log(searchResult);
@@ -25,6 +26,7 @@ export default function SearchPage() {
           </ul>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
