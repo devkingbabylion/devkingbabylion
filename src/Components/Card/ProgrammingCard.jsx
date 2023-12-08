@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import link from '../../Assets/link.svg';
+import linkIcon from '../../Assets/link.svg';
 import Angular from '../../Assets/Angular.svg';
 import JavaScript from '../../Assets/JavaScript.svg';
 import CSS from '../../Assets/CSS.svg';
@@ -51,6 +51,8 @@ const StyledHoverCard = styled.div`
     height: 18px;
   }
   h1 {
+    font-size: 30px;
+    margin-top: 23px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -62,10 +64,12 @@ const StyledHoverCard = styled.div`
   }
   a {
     margin-left: 8px;
+    color: #fff;
+    text-decoration: underline #fff;
   }
 `;
 
-export default function ProgrammingCard({ name }) {
+export default function ProgrammingCard({ name, links }) {
   const [card, setCard] = useState(false);
   const logos = {
     Angular,
@@ -95,18 +99,13 @@ export default function ProgrammingCard({ name }) {
         {card && (
           <StyledHoverCard>
             <h1>{name}</h1>
-            <div>
-              <img src={link} alt="MDN" />
-              <a href="">JavaScript MDN</a>
-            </div>
-            <div>
-              <img src={link} alt="MDN" />
-              <a href="">JavaScript MDN</a>
-            </div>
-            <div>
-              <img src={link} alt="MDN" />
-              <a href="">JavaScript MDN</a>
-            </div>
+            {links &&
+              links.map((link, index) => (
+                <div key={index}>
+                  <img src={linkIcon} alt="Link" />
+                  <a href={link.url}>{link.title}</a>
+                </div>
+              ))}
           </StyledHoverCard>
         )}
       </StyledProgrammingCard>

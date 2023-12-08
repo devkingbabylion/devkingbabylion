@@ -11,7 +11,13 @@ export default function ProgrammingPage() {
       <StyledProgrammingLayout>
         <p>Programming</p>
         <ProgrammingCard name={'JavaScript'} />
-        <ProgrammingCard name={'Angular'} />
+        <ProgrammingCard
+          name={'HTML5'}
+          links={[
+            { url: 'https://www.naver.com/', title: '링크 1' },
+            { url: 'https://www.naver.com/', title: '링크 2' },
+          ]}
+        />
       </StyledProgrammingLayout>
       <Footer />
     </>
