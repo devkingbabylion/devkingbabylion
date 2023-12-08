@@ -4,9 +4,9 @@ import { searchResultState } from '../../Recoil/searchResultState';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import { StyledHomeLayout, StyledTitle } from './home.styled';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import Info from '../../Components/Info/Info';
+import { StyledHomeLayout, StyledTitle, StyledError } from './home.styled';
 
 export default function HomePage() {
   const [query, setQuery] = useState('');
@@ -56,7 +56,7 @@ export default function HomePage() {
           setQuery={setQuery}
           handleSearch={handleSearch}
         />
-        {error && <p>{error}</p>}
+        {error && <StyledError>{error}</StyledError>}
         <Info />
       </StyledHomeLayout>
       <Footer />
