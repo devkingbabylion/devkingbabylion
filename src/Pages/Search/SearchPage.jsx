@@ -1,7 +1,9 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { searchResultState } from '../../Recoil/searchResultState';
+import NewsCard from '../../Components/NewsCard/NewsCard';
 import Header from '../../Components/Header/Header';
+
 export default function SearchPage() {
   const searchResult = useRecoilValue(searchResultState);
   console.log(searchResult);
@@ -15,16 +17,12 @@ export default function SearchPage() {
           <ul>
             {searchResult.items.map((item, index) => (
               <li key={index}>
-                <strong>{item.title}</strong>
-                <p>{item.description}</p>
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  {item.link}
-                </a>
+                <NewsCard {...item} />
               </li>
             ))}
           </ul>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
