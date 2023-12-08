@@ -6,6 +6,11 @@ import {
 } from './searchBar.styled';
 import searchBtn from '../../Assets/Search.svg';
 export default function SearchBar({ query, setQuery, handleSearch }) {
+  const handleKeyDown = event => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
   return (
     <SearchBarContainer>
       <SearchInput
@@ -13,8 +18,8 @@ export default function SearchBar({ query, setQuery, handleSearch }) {
         placeholder="Search for..."
         value={query}
         onChange={e => setQuery(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
-      {/* <SearchButton src={searchBtn} alt="로고" /> */}
       <SearchButton onClick={handleSearch}>
         <img
           src={searchBtn}
