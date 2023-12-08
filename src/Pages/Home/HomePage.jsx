@@ -6,6 +6,7 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import { StyledHomeLayout } from './home.styled';
 import SearchBar from '../../Components/SearchBar/SearchBar';
+import Info from '../../Components/Info/Info';
 
 export default function HomePage() {
   const [query, setQuery] = useState('');
@@ -60,6 +61,7 @@ export default function HomePage() {
           handleSearch={handleSearch}
         />
         {error && <p style={{ color: 'red' }}>{error}</p>}
+        <Info />
       </StyledHomeLayout>
     </>
   );
