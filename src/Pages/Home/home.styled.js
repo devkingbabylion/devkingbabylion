@@ -14,3 +14,7 @@ export const StyledTitle = styled.p`
   font-weigth: bold;
   font-size: 20px;
 `;
+
+export const StyledError = styled.p`
+  color: red;
+`;
