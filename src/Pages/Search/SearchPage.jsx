@@ -21,8 +21,8 @@ export default function SearchPage() {
               </li>
             ))}
           </ul>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
