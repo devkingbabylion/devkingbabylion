@@ -5,16 +5,22 @@ export const HeaderContainer = styled.header`
   padding-left: 50px;
   padding-right: 50px;
   height: 100px;
-  flex-shrink: 0;
   display: flex;
   gap: 50px;
-  // justify-content: space-between;
   align-items: center;
   list-style: none;
   font-size: 18px;
-
   border-bottom: 1px solid #bdbdbd;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: transform 0.5s ease;
 
+  ${({ scrolling }) =>
+    scrolling &&
+    css`
+      transform: translateY(-100%);
+    `}
   ${props => {
     switch (props.type) {
       case 'home':

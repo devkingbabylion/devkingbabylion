@@ -6,7 +6,12 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import Info from '../../Components/Info/Info';
-import { StyledHomeLayout, StyledTitle, StyledError } from './home.styled';
+import {
+  StyledHomeLayout,
+  RootContainer,
+  StyledTitle,
+  StyledError,
+} from './home.styled';
 
 export default function HomePage() {
   const [query, setQuery] = useState('');
@@ -48,18 +53,20 @@ export default function HomePage() {
 
   return (
     <>
-      <Header type="home" />
-      <StyledHomeLayout>
-        <StyledTitle>🦁개발왕 아기사자🦁</StyledTitle>
-        <SearchBar
-          query={query}
-          setQuery={setQuery}
-          handleSearch={handleSearch}
-        />
-        {error && <StyledError>{error}</StyledError>}
-        <Info />
-      </StyledHomeLayout>
-      <Footer />
+      <RootContainer>
+        <Header type="home" />
+        <StyledHomeLayout>
+          <StyledTitle>🦁개발왕 아기사자🦁</StyledTitle>
+          <SearchBar
+            query={query}
+            setQuery={setQuery}
+            handleSearch={handleSearch}
+          />
+          {error && <StyledError>{error}</StyledError>}
+          <Info />
+        </StyledHomeLayout>
+        <Footer />
+      </RootContainer>
     </>
   );
 }
