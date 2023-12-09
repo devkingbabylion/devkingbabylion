@@ -6,5 +6,13 @@ export const StyledProgrammingLayout = styled.div`
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
+  // height: 100vh;
+`;
+
+export const StyledProgramminContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  // overflow: auto;
 `;

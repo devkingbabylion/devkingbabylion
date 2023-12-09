@@ -4,7 +4,7 @@ import {
   StyledHoverCardLayOut,
 } from './programmingCard.styled';
 import linkIcon from '../../Assets/link.svg';
-import Angular from '../../Assets/Angular.svg';
+import Angular from '../../Assets/angular.svg';
 import JavaScript from '../../Assets/JavaScript.svg';
 import CSS from '../../Assets/CSS.svg';
 import BootStrap from '../../Assets/BootStrap.svg';
@@ -14,6 +14,10 @@ import Sass from '../../Assets/Sass.svg';
 import TailWind from '../../Assets/Tailwind.svg';
 import TypeScript from '../../Assets/TypeScript.svg';
 import Vue from '../../Assets/Vue.svg';
+import Npm from '../../Assets/npm.svg';
+import Express from '../../Assets/express.svg';
+import Jquery from '../../Assets/jquery.svg';
+import react from '../../Assets/React.svg';
 
 export default function ProgrammingCard({ name, links }) {
   const [card, setCard] = useState(false);
@@ -28,6 +32,10 @@ export default function ProgrammingCard({ name, links }) {
     BootStrap,
     TypeScript,
     Vue,
+    Npm,
+    Express,
+    Jquery,
+    React: react,
   };
 
   return (
