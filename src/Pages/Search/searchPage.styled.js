@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const SearchResultLayOut = styled.ul`
   display: flex;
-  width: 1200px;
-  margin: 92px 0px 159px 200px;
+  justify-content: center;
+  margin: 92px 0px 200px 0px;
+  padding-left: 150px;
+  padding-right: 150px;
   gap: 61px 85px;
   flex-wrap: wrap;
 `;

@@ -4,7 +4,7 @@ import { searchResultState } from '../../Recoil/searchResultState';
 import NewsCard from '../../Components/NewsCard/NewsCard';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import { SearchResultLayOut } from './searchPage.styled';
+import { SearchPageLayOut, SearchResultLayOut } from './searchPage.styled';
 
 export default function SearchPage() {
   const searchResult = useRecoilValue(searchResultState);
