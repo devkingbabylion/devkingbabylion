@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   SearchBarContainer,
   SearchInput,
@@ -6,9 +6,18 @@ import {
 } from './searchBar.styled';
 import searchBtn from '../../Assets/Search.svg';
 export default function SearchBar({ query, setQuery, handleSearch }) {
+  const inputRef = useRef(null);
   const handleKeyDown = event => {
     if (event.key === 'Enter') {
-      handleSearch();
+      try {
+        handleSearch();
+      } catch (error) {
+        // 에러 발생 시, 처리하고 input에 focus 설정
+        console.error(error);
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+      }
     }
   };
   return (

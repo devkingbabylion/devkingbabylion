@@ -23,6 +23,9 @@ export default function Header({ type }) {
       }
 
       const data = await response.json();
+      if (data.errorCode === 'SE01') {
+        throw new Error('검색어를 입력해 주세요');
+      }
       setSearchResult(data);
       setError(null);
 
