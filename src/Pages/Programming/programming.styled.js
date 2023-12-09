@@ -5,14 +5,14 @@ export const StyledProgrammingLayout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  // height: 100vh;
 `;
 
 export const StyledProgramminContainer = styled.div`
+  padding: 50px;
+  padding-top: 150px;
+  // padding-bottom: 150px;
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 50px;
   justify-content: center;
-  // overflow: auto;
 `;

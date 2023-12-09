@@ -14,7 +14,6 @@ export default function ProgrammingPage() {
     <>
       <Header type="programming" />
       <StyledProgrammingLayout>
-        <p>Programming</p>
         <StyledProgramminContainer>
           <ProgrammingCard
             name={'JavaScript'}
@@ -216,7 +215,7 @@ export default function ProgrammingPage() {
           />
         </StyledProgramminContainer>
       </StyledProgrammingLayout>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

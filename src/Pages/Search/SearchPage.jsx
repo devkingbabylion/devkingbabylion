@@ -22,7 +22,7 @@ export default function SearchPage() {
           ))}
         </SearchResultLayOut>
       )}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
