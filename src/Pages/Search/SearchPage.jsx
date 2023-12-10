@@ -8,13 +8,13 @@ import { SearchResultLayOut } from './searchPage.styled';
 
 export default function SearchPage() {
   const searchResult = useRecoilValue(searchResultState);
-  const [emptyResult, setEmptyResult] = useState(false);
+  // const [emptyResult, setEmptyResult] = useState(false);
+  // useEffect(() => {
+  //   if (searchResult === null) {
+  //     setEmptyResult(true);
+  //   }
+  // }, [searchResult]);
   console.log(searchResult);
-  useEffect(() => {
-    if (searchResult === null) {
-      setEmptyResult(true);
-    }
-  }, [searchResult]);
 
   return (
     <div>
@@ -28,11 +28,11 @@ export default function SearchPage() {
           ))}
         </SearchResultLayOut>
       )}
-      {emptyResult && (
+      {/* {emptyResult && (
         <SearchResultLayOut>
           <div>검색결과가없습니다.</div>
         </SearchResultLayOut>
-      )}
+      )} */}
       {/* <Footer /> */}
     </div>
   );
