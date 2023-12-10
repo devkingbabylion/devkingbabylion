@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import { searchResultState } from '../../Recoil/searchResultState';
 import NewsCard from '../../Components/NewsCard/NewsCard';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import { SearchPageLayOut, SearchResultLayOut } from './searchPage.styled';
+import { SearchResultLayOut } from './searchPage.styled';
 
 export default function SearchPage() {
   const searchResult = useRecoilValue(searchResultState);
+  const [emptyResult, setEmptyResult] = useState(false);
   console.log(searchResult);
+  useEffect(() => {
+    if (searchResult === null) {
+      setEmptyResult(true);
+    }
+  }, [searchResult]);
 
   return (
     <div>
@@ -20,6 +26,11 @@ export default function SearchPage() {
               <NewsCard {...item} />
             </li>
           ))}
+        </SearchResultLayOut>
+      )}
+      {emptyResult && (
+        <SearchResultLayOut>
+          <div>검색결과가없습니다.</div>
         </SearchResultLayOut>
       )}
       {/* <Footer /> */}
