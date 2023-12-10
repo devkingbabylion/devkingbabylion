@@ -13,11 +13,6 @@ export default function SearchPage() {
   const searchResult = useRecoilValue(searchResultState);
   const [hasMoreItems, setHasMoreItems] = useState(true);
 
-  useEffect(() => {
-    setItems([]);
-    fetchSearchResults(1);
-  }, [searchResult?.query, fetchSearchResults]);
-
   const fetchSearchResults = async pageNum => {
     const encText = encodeURIComponent(searchResult?.query);
     const calPageNum = parseInt((pageNum - 1) * 10 + 1);
@@ -40,6 +35,12 @@ export default function SearchPage() {
       setHasMoreItems(false);
     }
   };
+
+  useEffect(() => {
+    setItems([]);
+    fetchSearchResults(1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchResult?.query]);
 
   return (
     <div>
