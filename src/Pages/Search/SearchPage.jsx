@@ -41,6 +41,12 @@ export default function SearchPage() {
     }
   };
 
+  useEffect(() => {
+    setItems([]);
+    fetchSearchResults(1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchResult?.query]);
+
   return (
     <div>
       <Header type="search" />
