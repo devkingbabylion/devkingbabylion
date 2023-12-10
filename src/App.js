@@ -1,22 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AppRoutes from './Routes/AppRoutes';
 import GlobalStyle from './Styles/GlobalStyle';
-import Header from './Components/Header/Header';
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
-import Footer from './Components/Footer/Footer';
+import { RecoilRoot } from 'recoil';
 
 export default function App() {
   return (
     <RecoilRoot>
       <GlobalStyle />
-      {/* <Header /> */}
-      {/* <Footer /> */}
       <AppRoutes />
     </RecoilRoot>
   );

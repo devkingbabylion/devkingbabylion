@@ -3,7 +3,6 @@ import { useRecoilValue } from 'recoil';
 import { searchResultState } from '../../Recoil/searchResultState';
 import NewsCard from '../../Components/NewsCard/NewsCard';
 import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';
 import { SearchResultLayOut } from './searchPage.styled';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -15,16 +14,17 @@ export default function SearchPage() {
   const [hasMoreItems, setHasMoreItems] = useState(true);
 
   useEffect(() => {
+    setItems([]);
     fetchSearchResults(1);
-  }, []);
+  }, [searchResult?.query]);
 
   const fetchSearchResults = async pageNum => {
     const encText = encodeURIComponent(searchResult?.query);
-    const base_url = `/.netlify/functions/search?query=${encText}`;
-    const url = base_url + `&display=10&start=${(pageNum - 1) * 10 + 1}`;
+    const calPageNum = parseInt((pageNum - 1) * 10 + 1);
 
+    const base_url = `/.netlify/functions/search?query=${encText}&start=${calPageNum}`;
     try {
-      const response = await fetch(url);
+      const response = await fetch(base_url);
       if (!response.ok) {
         throw new Error('API 요청 중 오류가 발생했습니다.');
       }

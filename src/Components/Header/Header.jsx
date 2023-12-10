@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { HeaderContainer, SearchBarWrapper } from './header.styled';
+import { StyledHeaderLayout, StyledSearchBarWrapper } from './header.styled';
 import { useSetRecoilState } from 'recoil';
 import { searchResultState } from '../../Recoil/searchResultState';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import devkingbabylion from '../../Assets/devkingbabylion.png';
 import SearchBar from '../SearchBar/SearchBar';
 export default function Header({ type }) {
   const [query, setQuery] = useState('');
@@ -37,7 +36,7 @@ export default function Header({ type }) {
   switch (type) {
     case 'home':
       return (
-        <HeaderContainer type={type}>
+        <StyledHeaderLayout type={type}>
           <Link to="/">🦁개발왕 아기사자🦁</Link>
           <li>
             <Link
@@ -54,11 +53,11 @@ export default function Header({ type }) {
           <li>
             <Link to="/programming">Programming</Link>
           </li>
-        </HeaderContainer>
+        </StyledHeaderLayout>
       );
     case 'search':
       return (
-        <HeaderContainer type={type} scrolling={scrolling}>
+        <StyledHeaderLayout type={type} scrolling={scrolling}>
           <Link to="/">🦁개발왕 아기사자🦁</Link>
           <li>
             <Link to="/">Home</Link>
@@ -66,18 +65,18 @@ export default function Header({ type }) {
           <li>
             <Link to="/programming">Programming</Link>
           </li>
-          <SearchBarWrapper>
+          <StyledSearchBarWrapper>
             <SearchBar
               query={query}
               setQuery={setQuery}
               handleSearch={handleSearch}
             />
-          </SearchBarWrapper>
-        </HeaderContainer>
+          </StyledSearchBarWrapper>
+        </StyledHeaderLayout>
       );
     case 'programming':
       return (
-        <HeaderContainer type={type} scrolling={scrolling}>
+        <StyledHeaderLayout type={type} scrolling={scrolling}>
           <Link to="/">🦁개발왕 아기사자🦁</Link>
           <li>
             <Link to="/">Home</Link>
@@ -94,14 +93,14 @@ export default function Header({ type }) {
               Programming
             </Link>
           </li>
-          <SearchBarWrapper>
+          <StyledSearchBarWrapper>
             <SearchBar
               query={query}
               setQuery={setQuery}
               handleSearch={handleSearch}
             />
-          </SearchBarWrapper>
-        </HeaderContainer>
+          </StyledSearchBarWrapper>
+        </StyledHeaderLayout>
       );
     default:
       return null;
