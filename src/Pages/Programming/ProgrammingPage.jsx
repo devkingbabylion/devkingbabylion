@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import {
   StyledProgrammingLayout,
@@ -215,7 +214,6 @@ export default function ProgrammingPage() {
           />
         </StyledProgramminContainer>
       </StyledProgrammingLayout>
-      {/* <Footer /> */}
     </>
   );
 }

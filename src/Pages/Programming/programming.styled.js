@@ -10,7 +10,6 @@ export const StyledProgrammingLayout = styled.div`
 export const StyledProgramminContainer = styled.div`
   padding: 50px;
   padding-top: 150px;
-  // padding-bottom: 150px;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;

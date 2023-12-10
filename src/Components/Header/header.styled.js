@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const HeaderContainer = styled.header`
+export const StyledHeaderLayout = styled.header`
   background-color: white;
   padding-left: 50px;
   padding-right: 50px;
@@ -33,6 +33,6 @@ export const HeaderContainer = styled.header`
   }};
 `;
 
-export const SearchBarWrapper = styled.div`
+export const StyledSearchBarWrapper = styled.div`
   margin-left: auto;
 `;
