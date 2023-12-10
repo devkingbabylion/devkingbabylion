@@ -19,8 +19,6 @@ export default function SearchPage() {
   }, []);
 
   const fetchSearchResults = async pageNum => {
-    console.log(searchResult?.query);
-    console.log(pageNum);
     const encText = encodeURIComponent(searchResult?.query);
     const base_url = `/.netlify/functions/search?query=${encText}`;
     const url = base_url + `&display=10&start=${(pageNum - 1) * 10 + 1}`;
@@ -56,7 +54,7 @@ export default function SearchPage() {
           });
         }}
         hasMore={hasMoreItems}
-        loader={<p>Loading...</p>}
+        loader={<p style={{ textAlign: 'center' }}>Loading...</p>}
         endMessage={
           <p style={{ textAlign: 'center' }}>
             <b>더 이상 가져올 뉴스가 없습니다.</b>
@@ -71,7 +69,6 @@ export default function SearchPage() {
           ))}
         </SearchResultLayOut>
       </InfiniteScroll>
-      <Footer />
     </div>
   );
 }
