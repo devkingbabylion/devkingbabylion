@@ -16,7 +16,7 @@ export default function SearchPage() {
   useEffect(() => {
     setItems([]);
     fetchSearchResults(1);
-  }, [searchResult?.query]);
+  }, [searchResult?.query, fetchSearchResults]);
 
   const fetchSearchResults = async pageNum => {
     const encText = encodeURIComponent(searchResult?.query);
