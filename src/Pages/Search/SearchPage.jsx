@@ -8,14 +8,15 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 export default function SearchPage() {
   const [page, setPage] = useState(1);
-  const [len, setLen] = useState(10);
   const [items, setItems] = useState([]);
   const searchResult = useRecoilValue(searchResultState);
   const [hasMoreItems, setHasMoreItems] = useState(true);
 
   useEffect(() => {
+    setHasMoreItems(true);
+    setPage(1);
     setItems([]);
-    fetchSearchResults(1);
+    fetchSearchResults(page);
   }, [searchResult?.query]);
 
   const fetchSearchResults = async pageNum => {
@@ -29,8 +30,7 @@ export default function SearchPage() {
         throw new Error('API 요청 중 오류가 발생했습니다.');
       }
       let data = await response.json();
-      setLen(pr => pr - 1);
-      if (data.items.length > 0 && len > 0) {
+      if (data.items.length) {
         setItems(prevItems => [...prevItems, ...data.items]);
       } else {
         setHasMoreItems(false);
@@ -54,9 +54,13 @@ export default function SearchPage() {
           });
         }}
         hasMore={hasMoreItems}
-        loader={<p style={{ textAlign: 'center' }}>Loading...</p>}
+        loader={
+          <p style={{ textAlign: 'center', paddingBottom: '30px' }}>
+            Loading...
+          </p>
+        }
         endMessage={
-          <p style={{ textAlign: 'center' }}>
+          <p style={{ textAlign: 'center', paddingBottom: '30px' }}>
             <b>더 이상 가져올 뉴스가 없습니다.</b>
           </p>
         }
