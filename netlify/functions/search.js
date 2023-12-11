@@ -1,6 +1,7 @@
-import axios from 'axios';
+// import axios from 'axios';
+const axios = require('axios');
 
-export async function handler(event, context) {
+exports.handler = async function (event, context) {
   const query = event.queryStringParameters.query;
   const start = event.queryStringParameters.start || 1;
   console.log(`query ${query}`);
@@ -18,4 +19,4 @@ export async function handler(event, context) {
     statusCode: 200,
     body: JSON.stringify(data),
   };
-}
+};
