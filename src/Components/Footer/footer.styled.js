@@ -13,6 +13,11 @@ export const StyledFooterLayout = styled.footer`
   justify-content: space-evenly;
   color: #ffffff;
   align-items: center;
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+    font-size: 12px;
+  }
 `;
 
 export const StyledFooterContent = styled.div`
