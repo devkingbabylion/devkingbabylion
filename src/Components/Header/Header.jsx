@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { StyledHeaderLayout, StyledSearchBarWrapper } from './header.styled';
+import {
+  StyledHeaderLayout,
+  StyledSearchBarWrapper,
+  StyledHeaderMenuLayout,
+} from './header.styled';
 import { useSetRecoilState } from 'recoil';
 import { searchResultState } from '../../Recoil/searchResultState';
 import { useNavigate } from 'react-router-dom';
@@ -78,21 +82,23 @@ export default function Header({ type }) {
       return (
         <StyledHeaderLayout type={type} scrolling={scrolling}>
           <Link to="/">🦁개발왕 아기사자🦁</Link>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link
-              to="/programming"
-              style={{
-                color: '#5d5a88',
-                fontWeight: 'bold',
-                textDecoration: 'underline',
-              }}
-            >
-              Programming
-            </Link>
-          </li>
+          <StyledHeaderMenuLayout>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link
+                to="/programming"
+                style={{
+                  color: '#5d5a88',
+                  fontWeight: 'bold',
+                  textDecoration: 'underline',
+                }}
+              >
+                Programming
+              </Link>
+            </li>
+          </StyledHeaderMenuLayout>
           <StyledSearchBarWrapper>
             <SearchBar
               query={query}

@@ -36,3 +36,7 @@ export const StyledHeaderLayout = styled.header`
 export const StyledSearchBarWrapper = styled.div`
   margin-left: auto;
 `;
+export const StyledHeaderMenuLayout = styled.ul`
+  display: flex;
+  gap: 50px;
+`;
