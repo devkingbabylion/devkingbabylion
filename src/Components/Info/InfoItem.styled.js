@@ -6,6 +6,8 @@ export const StyledInfoItemLayout = styled.div`
   align-items: center;
   gap: 8px;
   cursor: pointer;
+
+  border: 1px solid blue;
 `;
 
 export const StyledImgBox = styled.div`
@@ -16,9 +18,16 @@ export const StyledImgBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* border: 1px solid red; */
+  @media screen and (max-width: 580px) {
+    width: 75px;
+    height: 75px;
+  }
 `;
 
 export const StyledImg = styled.img`
+  width: 100%;
   height: 100%;
 `;
 
@@ -28,4 +37,8 @@ export const StyledTitleContent = styled.p`
   font-size: 14px;
   font-weight: 700;
   text-align: center;
+
+  @media screen and (max-width: 580px) {
+    font-size: 12px;
+  }
 `;
