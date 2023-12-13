@@ -7,17 +7,10 @@ import {
 import searchBtn from '../../Assets/Search.svg';
 export default function SearchBar({ query, setQuery, handleSearch }) {
   const inputRef = useRef(null);
-  const handleKeyDown = event => {
-    if (event.key === 'Enter') {
-      try {
-        handleSearch();
-      } catch (error) {
-        // 에러 발생 시, 처리하고 input에 focus 설정
-        console.error(error);
-        if (inputRef.current) {
-          inputRef.current.focus();
-        }
-      }
+  const search = () => {
+    handleSearch();
+    if (!query.trim()) {
+      inputRef.current.focus();
     }
   };
   return (
@@ -27,9 +20,10 @@ export default function SearchBar({ query, setQuery, handleSearch }) {
         placeholder="Search for..."
         value={query}
         onChange={e => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
+        onKeyDown={e => e.key === 'Enter' && search()}
+        ref={inputRef}
       />
-      <SearchButton onClick={handleSearch}>
+      <SearchButton onClick={search}>
         <img
           src={searchBtn}
           alt="Search Icon"
