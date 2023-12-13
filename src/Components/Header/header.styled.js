@@ -16,6 +16,8 @@ export const StyledHeaderLayout = styled.header`
   // position: fixed;
   top: 0;
   transition: transform 0.5s ease;
+  z-index: 10;
+
   min-width: 414px;
   .home .icon {
     display: none;

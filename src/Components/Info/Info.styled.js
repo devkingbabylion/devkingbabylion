@@ -9,4 +9,6 @@ export const StyledInfoLayout = styled.article`
 export const StyledColBox = styled.div`
   display: flex;
   gap: 12px;
+
+  /* border: 1px solid red; */
 `;

@@ -37,7 +37,7 @@ export default function Footer() {
           </StyledFooterLink>
         </StyledFooterContent>
         <StyledFooterContent>
-          최지완 (jiwanchoi) :
+          최지완 (@jiwanchoi) :
           <StyledFooterLink
             href="wldhks1509@gmail.com"
             title="최지완님에게 이메일 보내기"
