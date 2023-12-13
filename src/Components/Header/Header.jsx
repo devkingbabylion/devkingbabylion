@@ -9,6 +9,8 @@ import { searchResultState } from '../../Recoil/searchResultState';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar';
+import lionIcon from '../../Assets/devkingbabylion.png';
+
 export default function Header({ type }) {
   const [query, setQuery] = useState('');
   const [error, setError] = useState(null);
@@ -41,7 +43,11 @@ export default function Header({ type }) {
     case 'home':
       return (
         <StyledHeaderLayout type={type}>
-          <Link to="/">🦁개발왕 아기사자🦁</Link>
+          <Link className="home" to="/">
+            <span className="text">🦁개발왕 아기사자🦁</span>
+            <img src={lionIcon} alt="Lion Icon" className="icon" />
+          </Link>
+
           <li>
             <Link
               to="/"
