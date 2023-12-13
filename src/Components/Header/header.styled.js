@@ -12,8 +12,8 @@ export const StyledHeaderLayout = styled.header`
   font-size: 18px;
   border-bottom: 1px solid #bdbdbd;
   width: 100%;
-  position: relative;
-  // position: fixed;
+  /* position: relative; */
+  position: fixed;
   top: 0;
   transition: transform 0.5s ease;
   z-index: 10;

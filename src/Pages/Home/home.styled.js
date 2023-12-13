@@ -7,7 +7,6 @@ export const StyledHomeLayout = styled.div`
   align-items: center;
   gap: 50px;
 
-  /* background-color: red; */
   overflow-y: auto;
 `;
 export const RootContainer = styled.div`
@@ -15,11 +14,9 @@ export const RootContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  /* height: calc(100vh - 200px); */
-  height: 100vh;
-  background: blue;
-  /* margin-top: 100px; */
-  /* margin-bottom: 100px; */
+  height: calc(100vh - 200px);
+  margin-top: 100px;
+  margin-bottom: 100px;
 `;
 
 export const StyledTitle = styled.p`

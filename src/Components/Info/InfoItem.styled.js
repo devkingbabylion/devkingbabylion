@@ -6,8 +6,6 @@ export const StyledInfoItemLayout = styled.div`
   align-items: center;
   gap: 8px;
   cursor: pointer;
-
-  border: 1px solid blue;
 `;
 
 export const StyledImgBox = styled.div`
@@ -19,7 +17,6 @@ export const StyledImgBox = styled.div`
   align-items: center;
   justify-content: center;
 
-  /* border: 1px solid red; */
   @media screen and (max-width: 580px) {
     width: 75px;
     height: 75px;
