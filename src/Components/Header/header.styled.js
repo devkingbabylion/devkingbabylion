@@ -17,8 +17,9 @@ export const StyledHeaderLayout = styled.header`
   top: 0;
   transition: transform 0.5s ease;
   z-index: 10;
-
   min-width: 414px;
+
+  /* homeheader 반응형 */
   .home .icon {
     display: none;
   }
@@ -27,6 +28,20 @@ export const StyledHeaderLayout = styled.header`
       display: none;
     }
     .home .icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  /* search, programmingheader 반응형 */
+  .home2 .icon {
+    display: none;
+  }
+  @media (max-width: 1000px) {
+    .home2 .text2 {
+      display: none;
+    }
+    .home2 .icon {
       display: inline-block;
       width: 40px;
       height: 40px;
