@@ -86,7 +86,10 @@ export default function Header({ type }) {
       );
     case 'programming':
       return (
-        <StyledHeaderLayout type={type} scrolling={scrolling}>
+        <StyledHeaderLayout
+          type={type}
+          scrolling={scrolling ? 'true' : undefined}
+        >
           <Link to="/">🦁개발왕 아기사자🦁</Link>
           <StyledHeaderMenuLayout>
             <li>
