@@ -14,7 +14,8 @@ export const StyledFooterLayout = styled.footer`
   color: #ffffff;
   align-items: center;
 
-  @media (max-width: 580px) {
+  min-width: 414px;
+  @media screen and (max-width: 640px) {
     flex-direction: column;
     font-size: 12px;
   }

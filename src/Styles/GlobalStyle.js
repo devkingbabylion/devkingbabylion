@@ -31,6 +31,8 @@ const GlobalStyle = createGlobalStyle`
 	}
 	body {
 		line-height: 1;	
+		min-width: 414px;
+		/* min-height: 600px; */
 	}
 	ol, ul {
 		list-style: none;

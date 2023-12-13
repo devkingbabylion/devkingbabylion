@@ -16,6 +16,8 @@ export const StyledHeaderLayout = styled.header`
   top: 0;
   transition: transform 0.5s ease;
 
+  z-index: 10;
+
   ${({ scrolling }) =>
     scrolling &&
     css`
