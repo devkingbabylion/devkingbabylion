@@ -67,18 +67,23 @@ export default function Header({ type }) {
       );
     case 'search':
       return (
-        <StyledHeaderLayout type={type} scrolling={scrolling}>
+        <StyledHeaderLayout
+          type={type}
+          scrolling={scrolling ? 'true' : undefined}
+        >
           <Link className="home2" to="/">
             <span className="text2">🦁개발왕 아기사자🦁</span>
             <img src={lionIcon} alt="Lion Icon" className="icon" />
           </Link>
 
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/programming">Programming</Link>
-          </li>
+          <StyledHeaderMenuLayout>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/programming">Programming</Link>
+            </li>
+          </StyledHeaderMenuLayout>
           <StyledSearchBarWrapper>
             <SearchBar
               query={query}

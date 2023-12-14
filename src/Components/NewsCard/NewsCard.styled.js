@@ -5,6 +5,7 @@ export const StyledCardLayout = styled.article`
   flex-direction: column;
   justify-content: space-between;
   width: 450px;
+
   /* height: 160px; */
   gap: 12px;
   padding: 24px;
@@ -29,7 +30,8 @@ export const StyledTitleContent = styled.h3`
 
 export const StyledDetailContent = styled.p`
   width: 100%;
-  color: #3c3c43;
+  /* color: #3c3c43; */
+  color: #2c2c2c;
   font-size: 14px;
   line-height: normal;
 
@@ -42,7 +44,8 @@ export const StyledDetailContent = styled.p`
 `;
 
 export const StyledDateContent = styled.p`
-  color: rgba(102, 102, 102, 0.8);
+  /* color: rgba(102, 102, 102, 0.8); */
+  color: #4a4a4a;
   font-size: 12px;
   line-height: normal;
 `;
