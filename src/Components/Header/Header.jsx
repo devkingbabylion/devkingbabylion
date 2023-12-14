@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar';
 import lionIcon from '../../Assets/devkingbabylion.png';
+import SearchBtn from '../SearchBtn/SearchBtn';
 
 export default function Header({ type }) {
   const [query, setQuery] = useState('');
@@ -80,7 +81,12 @@ export default function Header({ type }) {
             <Link to="/programming">Programming</Link>
           </li>
           <StyledSearchBarWrapper>
-            <SearchBar
+            {/* <SearchBar
+              query={query}
+              setQuery={setQuery}
+              handleSearch={handleSearch}
+            /> */}
+            <SearchBtn
               query={query}
               setQuery={setQuery}
               handleSearch={handleSearch}
@@ -116,7 +122,12 @@ export default function Header({ type }) {
             </li>
           </StyledHeaderMenuLayout>
           <StyledSearchBarWrapper>
-            <SearchBar
+            {/* <SearchBar
+              query={query}
+              setQuery={setQuery}
+              handleSearch={handleSearch}
+            /> */}
+            <SearchBtn
               query={query}
               setQuery={setQuery}
               handleSearch={handleSearch}

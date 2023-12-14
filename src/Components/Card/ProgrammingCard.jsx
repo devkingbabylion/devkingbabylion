@@ -57,7 +57,9 @@ export default function ProgrammingCard({ name, links }) {
               links.map((link, index) => (
                 <div key={index}>
                   <img src={linkIcon} alt="Link" />
-                  <a href={link.url}>{link.title}</a>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.title}
+                  </a>
                 </div>
               ))}
           </StyledHoverCardLayOut>
