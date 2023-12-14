@@ -80,6 +80,18 @@ export const StyledHoverCardLayOut = styled.div`
     left: 50vw;
     z-index: 999;
     transform: translate(-50%, -50%);
+    animation-duration: 0.5s;
+    animation-name: fadein;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 `;
 
@@ -88,11 +100,23 @@ export const StyledDim = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  height: 120%;
+  height: 115%;
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.6);
 
   @media screen and (min-width: 414px) {
     display: none;
+  }
+  animation-duration: 0.5s;
+  animation-name: fadein;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 `;
