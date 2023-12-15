@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import {
   StyledProgrammingCardLayOut,
   StyledHoverCardLayOut,
+  StyledImgBox,
+  StyledDim,
 } from './programmingCard.styled';
 import linkIcon from '../../Assets/link.svg';
 import Angular from '../../Assets/angular.svg';
@@ -40,18 +42,26 @@ export default function ProgrammingCard({ name, links }) {
 
   return (
     <div>
-      <StyledProgrammingCardLayOut
-        onMouseEnter={() => setCard(true)}
-        onMouseLeave={() => setCard(false)}
-      >
-        {!card && (
-          <div className="item">
-            <img src={logos[name]} alt="logo" />
-            <p>{name}</p>
-          </div>
-        )}
-        {card && (
-          <StyledHoverCardLayOut>
+      {!card && (
+        <>
+          <StyledProgrammingCardLayOut onMouseEnter={() => setCard(true)}>
+            <div className="item">
+              <img src={logos[name]} alt="logo" />
+              <p>{name}</p>
+            </div>
+          </StyledProgrammingCardLayOut>
+        </>
+      )}
+      <StyledImgBox onClick={() => setCard(true)}>
+        <img src={logos[name]} alt="logo" />
+      </StyledImgBox>
+      {card && (
+        <>
+          <StyledDim onClick={() => setCard(false)} />
+          <StyledHoverCardLayOut
+            onMouseLeave={() => setCard(false)}
+            onClick={() => setCard(false)}
+          >
             <h1>{name}</h1>
             {links &&
               links.map((link, index) => (
@@ -61,8 +71,8 @@ export default function ProgrammingCard({ name, links }) {
                 </div>
               ))}
           </StyledHoverCardLayOut>
-        )}
-      </StyledProgrammingCardLayOut>
+        </>
+      )}
     </div>
   );
 }

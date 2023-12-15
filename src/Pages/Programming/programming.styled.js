@@ -14,4 +14,9 @@ export const StyledProgramminContainer = styled.div`
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
+
+  @media screen and (max-width: 414px) {
+    padding-top: 150px;
+    gap: 75px;
+  }
 `;
