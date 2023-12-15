@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
-export const StyledHeaderLayout = styled.header`
+export const StyledHeaderLayout = styled.div`
   background-color: white;
   padding-left: 50px;
   padding-right: 50px;
   height: 100px;
   display: flex;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
   list-style: none;
   font-size: 18px;
