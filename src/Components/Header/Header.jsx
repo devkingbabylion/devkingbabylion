@@ -49,7 +49,7 @@ export default function Header({ type }) {
             <img src={lionIcon} alt="Lion Icon" className="icon" />
           </Link>
 
-          <li>
+          <span>
             <Link
               to="/"
               style={{
@@ -60,10 +60,10 @@ export default function Header({ type }) {
             >
               Home
             </Link>
-          </li>
-          <li>
+          </span>
+          <span>
             <Link to="/programming">Programming</Link>
-          </li>
+          </span>
         </StyledHeaderLayout>
       );
     case 'search':
