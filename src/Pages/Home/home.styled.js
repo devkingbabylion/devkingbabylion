@@ -7,7 +7,7 @@ export const StyledHomeLayout = styled.div`
   align-items: center;
   gap: 50px;
 
-  overflow-y: auto;
+  /* overflow-y: auto; */
 `;
 export const RootContainer = styled.div`
   display: flex;

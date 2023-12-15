@@ -68,7 +68,10 @@ export default function SearchBtn({ query, setQuery, handleSearch }) {
         />
       </SearchButton>
 
-      <SearchBarContainer isOpen={isSearchBarOpen} ref={searchBarRef}>
+      <SearchBarContainer
+        isOpen={isSearchBarOpen ? 'true' : undefined}
+        ref={searchBarRef}
+      >
         <SearchBarContent>
           <img
             src={searchBtn2}

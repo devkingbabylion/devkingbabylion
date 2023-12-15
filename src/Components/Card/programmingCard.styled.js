@@ -39,7 +39,7 @@ export const StyledImgBox = styled.div`
     width: 100%;
   }
 
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: 415px) {
     display: none;
   }
 `;
