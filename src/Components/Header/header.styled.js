@@ -17,7 +17,7 @@ export const StyledHeaderLayout = styled.div`
   top: 0;
   transition: transform 0.5s ease;
   z-index: 10;
-  min-width: 414px;
+  /* min-width: 414px; */
 
   /* homeheader 반응형 */
   .home .icon {
