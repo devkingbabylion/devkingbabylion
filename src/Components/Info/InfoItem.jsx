@@ -10,7 +10,7 @@ export default function InfoItem({ title, imgSrc, link }) {
   return (
     <StyledInfoItemLayout onClick={() => window.open(link, '_blank')}>
       <StyledImgBox>
-        <StyledImg src={imgSrc} />
+        <StyledImg src={imgSrc} alt="gitIcon" />
       </StyledImgBox>
       <StyledTitleContent>{title}</StyledTitleContent>
     </StyledInfoItemLayout>

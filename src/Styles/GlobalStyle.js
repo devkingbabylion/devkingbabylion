@@ -1,11 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+// import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-	${reset};
-  * {
-  	box-sizing: border-box;
-  }
 
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -24,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 		padding: 0;
 		border: 0;
 		font-size: 100%;
-		font: inherit;
+		/* font: inherit; */
 		vertical-align: baseline;
 		
 	}
@@ -35,6 +31,8 @@ const GlobalStyle = createGlobalStyle`
 	}
 	body {
 		line-height: 1;	
+		min-width: 414px;
+		/* min-height: 600px; */
 	}
 	ol, ul {
 		list-style: none;
@@ -60,6 +58,20 @@ const GlobalStyle = createGlobalStyle`
 		color: #000;
 		text-decoration: none;
 	}
+
+
+	@font-face {
+		font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+  * {
+		font-family: 'S-CoreDream-3Light';
+		box-sizing: border-box;
+  }
+
 `;
 
 export default GlobalStyle;

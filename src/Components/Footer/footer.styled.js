@@ -11,8 +11,14 @@ export const StyledFooterLayout = styled.footer`
   text-align: center;
   display: flex;
   justify-content: space-evenly;
-  color: #ffffff;
+  color: #fff;
   align-items: center;
+
+  min-width: 414px;
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    font-size: 12px;
+  }
 `;
 
 export const StyledFooterContent = styled.div`
@@ -24,5 +30,5 @@ export const StyledFooterContent = styled.div`
 `;
 
 export const StyledFooterLink = styled.a`
-  color: #b9dcde;
+  color: #fff;
 `;

@@ -1,6 +1,10 @@
 import React from 'react';
 import InfoItem from './InfoItem';
 import { StyledInfoLayout, StyledColBox } from './Info.styled';
+import Github_icon from '../../Assets/Github_logo_icon.png';
+import Notion_icon_min from '../../Assets/notion_black_logo_icon-min.png';
+import Figma_icon_min from '../../Assets/figma_logo_icon-min.png';
+import Naver_icon_min from '../../Assets/Naver_logo_icon-min.png';
 
 export default function Info() {
   const devData = [
@@ -29,25 +33,22 @@ export default function Info() {
   const projectData = [
     {
       title: 'GitHub',
-      imgSrc: 'https://cdn-icons-png.flaticon.com/256/25/25231.png',
+      imgSrc: Github_icon,
       link: 'https://github.com/devkingbabylion/devkingbabylion',
     },
     {
       title: 'Notion',
-      imgSrc:
-        'https://cdn.icon-icons.com/icons2/2428/PNG/512/notion_black_logo_icon_147102.png',
+      imgSrc: Notion_icon_min,
       link: 'https://heather-stamp-0c9.notion.site/b5a567a21cca4bb0b1810618b1f23d96?v=03f6dbb2cba94f95852a0d329a3494eb&pvs=4',
     },
     {
       title: 'Figma',
-      imgSrc:
-        'https://cdn.icon-icons.com/icons2/2429/PNG/512/figma_logo_icon_147289.png',
+      imgSrc: Figma_icon_min,
       link: 'https://www.figma.com/file/vFEVBVZ7FQmJnqHwuVBmWR',
     },
     {
       title: 'Naver API',
-      imgSrc:
-        'https://mir-s3-cdn-cf.behance.net/projects/404/c52c0238210507.Y3JvcCw5NTgsNzQ5LDIyMCw0NQ.png',
+      imgSrc: Naver_icon_min,
       link: 'https://developers.naver.com/docs/serviceapi/search/news/news.md#%EB%89%B4%EC%8A%A4',
     },
   ];

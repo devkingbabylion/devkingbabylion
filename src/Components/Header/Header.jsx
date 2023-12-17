@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { StyledHeaderLayout, StyledSearchBarWrapper } from './header.styled';
+import {
+  StyledHeaderLayout,
+  StyledSearchBarWrapper,
+  StyledHeaderMenuLayout,
+} from './header.styled';
 import { useSetRecoilState } from 'recoil';
 import { searchResultState } from '../../Recoil/searchResultState';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar';
+import lionIcon from '../../Assets/devkingbabylion.png';
+import SearchBtn from '../SearchBtn/SearchBtn';
+
 export default function Header({ type }) {
   const [query, setQuery] = useState('');
   const [error, setError] = useState(null);
@@ -37,8 +44,12 @@ export default function Header({ type }) {
     case 'home':
       return (
         <StyledHeaderLayout type={type}>
-          <Link to="/">🦁개발왕 아기사자🦁</Link>
-          <li>
+          <Link className="home" to="/">
+            <span className="text">🦁개발왕 아기사자🦁</span>
+            <img src={lionIcon} alt="Lion Icon" className="icon" />
+          </Link>
+
+          <span>
             <Link
               to="/"
               style={{
@@ -49,24 +60,38 @@ export default function Header({ type }) {
             >
               Home
             </Link>
-          </li>
-          <li>
+          </span>
+          <span>
             <Link to="/programming">Programming</Link>
-          </li>
+          </span>
         </StyledHeaderLayout>
       );
     case 'search':
       return (
-        <StyledHeaderLayout type={type} scrolling={scrolling}>
-          <Link to="/">🦁개발왕 아기사자🦁</Link>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/programming">Programming</Link>
-          </li>
+        <StyledHeaderLayout
+          type={type}
+          scrolling={scrolling ? 'true' : undefined}
+        >
+          <Link className="home2" to="/">
+            <span className="text2">🦁개발왕 아기사자🦁</span>
+            <img src={lionIcon} alt="Lion Icon" className="icon" />
+          </Link>
+
+          <StyledHeaderMenuLayout>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/programming">Programming</Link>
+            </li>
+          </StyledHeaderMenuLayout>
           <StyledSearchBarWrapper>
-            <SearchBar
+            {/* <SearchBar
+              query={query}
+              setQuery={setQuery}
+              handleSearch={handleSearch}
+            /> */}
+            <SearchBtn
               query={query}
               setQuery={setQuery}
               handleSearch={handleSearch}
@@ -76,25 +101,38 @@ export default function Header({ type }) {
       );
     case 'programming':
       return (
-        <StyledHeaderLayout type={type} scrolling={scrolling}>
-          <Link to="/">🦁개발왕 아기사자🦁</Link>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link
-              to="/programming"
-              style={{
-                color: '#5d5a88',
-                fontWeight: 'bold',
-                textDecoration: 'underline',
-              }}
-            >
-              Programming
-            </Link>
-          </li>
+        <StyledHeaderLayout
+          type={type}
+          scrolling={scrolling ? 'true' : undefined}
+        >
+          <Link className="home2" to="/">
+            <span className="text2">🦁개발왕 아기사자🦁</span>
+            <img src={lionIcon} alt="Lion Icon" className="icon" />
+          </Link>
+          <StyledHeaderMenuLayout>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link
+                to="/programming"
+                style={{
+                  color: '#5d5a88',
+                  fontWeight: 'bold',
+                  textDecoration: 'underline',
+                }}
+              >
+                Programming
+              </Link>
+            </li>
+          </StyledHeaderMenuLayout>
           <StyledSearchBarWrapper>
-            <SearchBar
+            {/* <SearchBar
+              query={query}
+              setQuery={setQuery}
+              handleSearch={handleSearch}
+            /> */}
+            <SearchBtn
               query={query}
               setQuery={setQuery}
               handleSearch={handleSearch}

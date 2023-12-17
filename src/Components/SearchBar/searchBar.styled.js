@@ -10,6 +10,8 @@ export const SearchBarContainer = styled.div`
   background: #f2f1fa;
   position: relative;
   justify-content: space-between;
+
+  z-index: 0;
 `;
 
 export const SearchInput = styled.input`

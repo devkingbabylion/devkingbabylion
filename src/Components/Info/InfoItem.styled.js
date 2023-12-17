@@ -16,10 +16,17 @@ export const StyledImgBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 580px) {
+    width: 75px;
+    height: 75px;
+  }
 `;
 
 export const StyledImg = styled.img`
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 `;
 
 export const StyledTitleContent = styled.p`
@@ -28,4 +35,8 @@ export const StyledTitleContent = styled.p`
   font-size: 14px;
   font-weight: 700;
   text-align: center;
+
+  @media screen and (max-width: 580px) {
+    font-size: 12px;
+  }
 `;
