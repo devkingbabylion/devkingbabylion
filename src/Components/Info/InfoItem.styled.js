@@ -6,11 +6,13 @@ export const StyledInfoItemLayout = styled.div`
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  flex-shrink: 0;
+  width: 20%;
 `;
 
 export const StyledImgBox = styled.div`
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   overflow: hidden;
   border-radius: 50%;
   display: flex;
@@ -18,13 +20,13 @@ export const StyledImgBox = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 580px) {
-    width: 75px;
-    height: 75px;
+    max-width: 75px;
+    max-height: 75px;
   }
 `;
 
 export const StyledImg = styled.img`
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   object-fit: cover;
 `;
