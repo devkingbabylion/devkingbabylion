@@ -24,6 +24,7 @@ export const StyledHeaderLayout = styled.div`
     display: none;
   }
   @media (max-width: 580px) {
+    padding: 15px;
     .home .text {
       display: none;
     }
@@ -70,4 +71,8 @@ export const StyledSearchBarWrapper = styled.div`
 export const StyledHeaderMenuLayout = styled.ul`
   display: flex;
   gap: 50px;
+
+  @media (max-width: 580px) {
+    gap: 25px;
+  }
 `;
