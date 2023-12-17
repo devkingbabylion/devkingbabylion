@@ -119,13 +119,23 @@
 
 ## 8. 기능 시연
 
-홈 화면에서 검색
+### 🖥 PC 화면
 
-서치 페이지 무한 스크롤
+<table>
+  <tr>
+    <th width="30%">홈 화면 & 검색 & 무한 스크롤</th>
+    <th width="30%">프로그래밍 페이지</th>
+    <th width="30%">Header로 검색</th>
+  </tr>
+  <tr>
 
-프로그래밍 페이지
+  <td><img alt="" src="./src/Assets/readme_pc_home_search.gif"></td>
+  <td><img alt="" src="./src/Assets/readme_pc_programming.gif"></td>
+  <td><img alt="" src="./src/Assets/readme_pc_header_search.gif"></td>
+  </tr>
+</table>
 
-헤더로 검색
+</br>
 
 ### 📱 모바일 화면
 
