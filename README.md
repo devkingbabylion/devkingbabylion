@@ -127,16 +127,21 @@
 
 헤더로 검색
 
-< 모바일 >
+### 📱 모바일 화면
 
-홈 화면에서 검색
-<img width="300" alt="" src="./src/Assets/m_home.gif">
+<table>
+  <tr>
+    <th width="30%">홈 화면 & 검색 & 무한 스크롤</th>
+    <th width="30%">프로그래밍 페이지</th>
+    <th width="30%">Header로 검색</th>
+  </tr>
+  <tr>
 
-서치 페이지 무한 스크롤
-<img width="300" alt="" src="./src/Assets/m_infinity_scroll.gif">
-
-프로그래밍 페이지
-<img width="300" alt="" src="./src/Assets/m_prog.gif">
+  <td><img alt="" src="./src/Assets/readme_mobile_home_search.gif"></td>
+  <td><img alt="" src="./src/Assets/readme_mobile_programming.gif"></td>
+  <td><img alt="" src="./src/Assets/readme_mobile_header_search.gif"></td>
+  </tr>
+</table>
 
 </br>
 
