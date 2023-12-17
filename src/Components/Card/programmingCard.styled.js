@@ -98,8 +98,11 @@ export const StyledHoverCardLayOut = styled.div`
 export const StyledDim = styled.div`
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100vw;
+  right: 0;
+  /* inset: 0 0 0 0; */
+  /* width: 100vw; */
   height: 180%;
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.6);
