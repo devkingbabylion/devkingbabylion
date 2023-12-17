@@ -100,7 +100,7 @@ export const StyledDim = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  height: 115%;
+  height: 180%;
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.6);
 
