@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const SearchBarContainer = styled.div`
   display: flex;
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
   padding: 10px 25px;
   gap: 10px;
   flex-shrink: 0;
@@ -17,7 +18,8 @@ export const SearchBarContainer = styled.div`
 export const SearchInput = styled.input`
   border: none;
   outline: none;
-  width: 320px;
+  width: 89%;
+  max-width: 320px;
   align-items: center;
   gap: 240px;
   flex-shrink: 0;
