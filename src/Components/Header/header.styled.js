@@ -24,7 +24,7 @@ export const StyledHeaderLayout = styled.div`
     display: none;
   }
   @media (max-width: 580px) {
-    padding: 15px;
+    padding: 5%;
     .home .text {
       display: none;
     }
