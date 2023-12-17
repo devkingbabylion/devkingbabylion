@@ -78,7 +78,7 @@ export const StyledHoverCardLayOut = styled.div`
     position: absolute;
     top: 50vh;
     left: 50vw;
-    z-index: 999;
+    z-index: 9999;
     transform: translate(-50%, -50%);
     animation-duration: 0.5s;
     animation-name: fadein;
@@ -98,13 +98,16 @@ export const StyledHoverCardLayOut = styled.div`
 export const StyledDim = styled.div`
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100vw;
-  height: 115%;
-  z-index: 99;
+  right: 0;
+  /* inset: 0 0 0 0; */
+  /* width: 100vw; */
+  height: 180%;
+  z-index: 999;
   background-color: rgba(0, 0, 0, 0.6);
 
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: 415px) {
     display: none;
   }
   animation-duration: 0.5s;

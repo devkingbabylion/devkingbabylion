@@ -16,6 +16,7 @@ export const StyledProgramminContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 414px) {
+    padding: 5%;
     padding-top: 150px;
     gap: 75px;
   }

@@ -17,13 +17,14 @@ export const StyledHeaderLayout = styled.div`
   top: 0;
   transition: transform 0.5s ease;
   z-index: 10;
-  min-width: 414px;
+  /* min-width: 414px; */
 
   /* homeheader 반응형 */
   .home .icon {
     display: none;
   }
   @media (max-width: 580px) {
+    padding: 5%;
     .home .text {
       display: none;
     }
@@ -70,4 +71,8 @@ export const StyledSearchBarWrapper = styled.div`
 export const StyledHeaderMenuLayout = styled.ul`
   display: flex;
   gap: 50px;
+
+  @media (max-width: 580px) {
+    gap: 25px;
+  }
 `;

@@ -7,6 +7,7 @@ export const StyledHomeLayout = styled.div`
   align-items: center;
   gap: 50px;
 
+  width: 100vw;
   /* overflow-y: auto; */
 `;
 export const RootContainer = styled.div`
