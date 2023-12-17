@@ -7,6 +7,8 @@ export const StyledFooterLayout = styled.footer`
 
   width: 100%;
   height: 100px;
+
+  padding-top: 10px;
   background-color: #697077;
   text-align: center;
   display: flex;
