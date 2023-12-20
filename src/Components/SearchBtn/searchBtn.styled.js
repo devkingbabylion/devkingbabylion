@@ -5,7 +5,7 @@ export const SearchBarContainer = styled.div`
   position: fixed;
   left: 0;
   right: 0;
-  top: ${props => (props.isOpen ? '70px' : '-100px')};
+  top: ${props => (props.isOpen ? '80px' : '-100px')};
   height: 70px;
   // top: ${props => (props.isOpen ? '0px' : '-100px')};
   // height: 100px;
